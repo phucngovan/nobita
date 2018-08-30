@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nyc</title>
+</head>
+<body onload="docReady()" >
+<img id=" ngoctrinh" src="img/1-ngoc-trinh-3-8665-1534820558.jpg" height="500" width="300"/>
+<script>
+    function upArrowPressed() {
+        let element = document.getElementById("ngoctrinh");
+        element.style.top = parseInt(element.style.top) -100 +"px";
+        
+    }
+    function dowownArrowPressed() {
+        let alement = document.getElementById("ngoctrinh");
+        alement.style.top = parseInt(alement.style.top) +100 +"px";
+    }
+    function leftArrowPressed() {
+        let alement = document.getElementById("ngoctrinh");
+        alement.style.top = parseInt(alement.style.top) -100 +"px";
+        
+    }
+    function rightArrowPressed() {
+        let alement = document.getElementById("ngoctrinh");
+        alement.style.top = parseInt(alement.style.top) +100 +"px";
+
+    }
+    function moveselection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                leftArrowPressed();
+                break;
+            case 39:
+                rightArrowPressed();
+                break;
+            case 38:
+                upArrowPressed();
+                break;
+            case 40:
+                dowownArrowPressed();
+                break;
+        }
+        
+    }
+    function docReady() {
+        window.addEventListener("keydown" , moveSelection);
+        
+    }
+</script>
+</body>
+</html>
